@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Game Console</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🎮 Web Game Console</h1>
+            <p class="subtitle">Choose your game and start playing!</p>
+        </header>
+
+        <main id="main-content">
+            <!-- Game Selection Screen -->
+            <div id="game-selection" class="screen active">
+                <div class="games-grid">
+                    <div class="game-card" data-game="tic-tac-toe">
+                        <div class="game-icon">❌⭕</div>
+                        <h3>Tic-Tac-Toe</h3>
+                        <p>Classic 3x3 strategy game</p>
+                    </div>
+                    <div class="game-card" data-game="snake">
+                        <div class="game-icon">🐍</div>
+                        <h3>Snake</h3>
+                        <p>Eat food and grow longer</p>
+                    </div>
+                    <div class="game-card" data-game="memory">
+                        <div class="game-icon">🧠</div>
+                        <h3>Memory Game</h3>
+                        <p>Remember the sequence</p>
+                    </div>
+                    <div class="game-card" data-game="rock-paper-scissors">
+                        <div class="game-icon">✂️📄🗿</div>
+                        <h3>Rock Paper Scissors</h3>
+                        <p>Beat the computer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tic-Tac-Toe Game -->
+            <div id="tic-tac-toe" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Tic-Tac-Toe</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="current-player">Current Player: <span id="current-player">X</span></div>
+                    <div class="score">
+                        <span>X: <span id="score-x">0</span></span>
+                        <span>O: <span id="score-o">0</span></span>
+                    </div>
+                </div>
+                <div class="tic-tac-toe-board" id="tic-tac-toe-board">
+                    <div class="cell" data-index="0"></div>
+                    <div class="cell" data-index="1"></div>
+                    <div class="cell" data-index="2"></div>
+                    <div class="cell" data-index="3"></div>
+                    <div class="cell" data-index="4"></div>
+                    <div class="cell" data-index="5"></div>
+                    <div class="cell" data-index="6"></div>
+                    <div class="cell" data-index="7"></div>
+                    <div class="cell" data-index="8"></div>
+                </div>
+                <div class="game-status" id="game-status"></div>
+            </div>
+
+            <!-- Snake Game -->
+            <div id="snake" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Snake</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">Score: <span id="snake-score">0</span></div>
+                    <div class="high-score">High Score: <span id="snake-high-score">0</span></div>
+                </div>
+                <canvas id="snake-canvas" width="400" height="400"></canvas>
+                <div class="snake-controls">
+                    <div class="control-row">
+                        <button class="control-btn" data-direction="up">↑</button>
+                    </div>
+                    <div class="control-row">
+                        <button class="control-btn" data-direction="left">←</button>
+                        <button class="control-btn" data-direction="down">↓</button>
+                        <button class="control-btn" data-direction="right">→</button>
+                    </div>
+                </div>
+                <div class="game-status" id="snake-status">Use arrow keys or buttons to control the snake</div>
+            </div>
+
+            <!-- Memory Game -->
+            <div id="memory" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Memory Game</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">Level: <span id="memory-level">1</span></div>
+                    <div class="score">Score: <span id="memory-score">0</span></div>
+                </div>
+                <div class="memory-board" id="memory-board">
+                    <div class="memory-button" data-color="red"></div>
+                    <div class="memory-button" data-color="blue"></div>
+                    <div class="memory-button" data-color="green"></div>
+                    <div class="memory-button" data-color="yellow"></div>
+                </div>
+                <div class="game-status" id="memory-status">Watch the pattern and repeat it!</div>
+            </div>
+
+            <!-- Rock Paper Scissors -->
+            <div id="rock-paper-scissors" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Rock Paper Scissors</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">
+                        <span>You: <span id="rps-player-score">0</span></span>
+                        <span>Computer: <span id="rps-computer-score">0</span></span>
+                    </div>
+                </div>
+                <div class="rps-game">
+                    <div class="choices">
+                        <div class="choice player-choice">
+                            <h3>Your Choice</h3>
+                            <div class="choice-display" id="player-choice">?</div>
+                        </div>
+                        <div class="vs">VS</div>
+                        <div class="choice computer-choice">
+                            <h3>Computer Choice</h3>
+                            <div class="choice-display" id="computer-choice">?</div>
+                        </div>
+                    </div>
+                    <div class="rps-buttons">
+                        <button class="rps-btn" data-choice="rock">🗿 Rock</button>
+                        <button class="rps-btn" data-choice="paper">📄 Paper</button>
+                        <button class="rps-btn" data-choice="scissors">✂️ Scissors</button>
+                    </div>
+                </div>
+                <div class="game-status" id="rps-status">Make your choice!</div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Web Game Console. Built with ❤️</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/tic-tac-toe.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/memory.js"></script>
+    <script src="js/rock-paper-scissors.js"></script>
+</body>
+</html>
