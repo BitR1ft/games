@@ -1,0 +1,25 @@
+{
+  "name": "web-game-console",
+  "version": "1.0.0",
+  "description": "A web-based game console with multiple games including Tic-Tac-Toe, Snake, and more",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080",
+    "dev": "npx http-server . -p 8080 -c-1",
+    "build": "echo 'Static files - no build required'",
+    "test": "echo 'No tests yet'"
+  },
+  "keywords": [
+    "games",
+    "tic-tac-toe",
+    "snake",
+    "web",
+    "html5",
+    "javascript"
+  ],
+  "author": "BitR1ft",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
