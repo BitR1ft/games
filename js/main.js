@@ -7,7 +7,13 @@ class GameConsole {
             'tic-tac-toe': document.getElementById('tic-tac-toe'),
             'snake': document.getElementById('snake'),
             'memory': document.getElementById('memory'),
-            'rock-paper-scissors': document.getElementById('rock-paper-scissors')
+            'rock-paper-scissors': document.getElementById('rock-paper-scissors'),
+            'tetris': document.getElementById('tetris'),
+            'chess': document.getElementById('chess'),
+            '2048': document.getElementById('2048'),
+            'pong': document.getElementById('pong'),
+            'breakout': document.getElementById('breakout'),
+            'connect-four': document.getElementById('connect-four')
         };
         
         this.init();
@@ -89,6 +95,36 @@ class GameConsole {
                     window.rpsGame.reset();
                 }
                 break;
+            case 'tetris':
+                if (window.tetrisGame) {
+                    window.tetrisGame.reset();
+                }
+                break;
+            case 'chess':
+                if (window.chessGame) {
+                    window.chessGame.reset();
+                }
+                break;
+            case '2048':
+                if (window.game2048) {
+                    window.game2048.reset();
+                }
+                break;
+            case 'pong':
+                if (window.pongGame) {
+                    window.pongGame.reset();
+                }
+                break;
+            case 'breakout':
+                if (window.breakoutGame) {
+                    window.breakoutGame.reset();
+                }
+                break;
+            case 'connect-four':
+                if (window.connectFourGame) {
+                    window.connectFourGame.reset();
+                }
+                break;
         }
     }
     
@@ -96,6 +132,15 @@ class GameConsole {
         // Stop any running games
         if (this.currentGame === 'snake' && window.snakeGame) {
             window.snakeGame.stop();
+        }
+        if (this.currentGame === 'tetris' && window.tetrisGame) {
+            window.tetrisGame.stop();
+        }
+        if (this.currentGame === 'pong' && window.pongGame) {
+            window.pongGame.stop();
+        }
+        if (this.currentGame === 'breakout' && window.breakoutGame) {
+            window.breakoutGame.stop();
         }
         
         this.showScreen('game-selection');
@@ -121,6 +166,36 @@ class GameConsole {
             case 'rock-paper-scissors':
                 if (window.rpsGame) {
                     window.rpsGame.reset();
+                }
+                break;
+            case 'tetris':
+                if (window.tetrisGame) {
+                    window.tetrisGame.reset();
+                }
+                break;
+            case 'chess':
+                if (window.chessGame) {
+                    window.chessGame.reset();
+                }
+                break;
+            case '2048':
+                if (window.game2048) {
+                    window.game2048.reset();
+                }
+                break;
+            case 'pong':
+                if (window.pongGame) {
+                    window.pongGame.reset();
+                }
+                break;
+            case 'breakout':
+                if (window.breakoutGame) {
+                    window.breakoutGame.reset();
+                }
+                break;
+            case 'connect-four':
+                if (window.connectFourGame) {
+                    window.connectFourGame.reset();
                 }
                 break;
         }

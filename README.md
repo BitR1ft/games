@@ -6,9 +6,9 @@ A modern, responsive web-based game console featuring multiple classic games wit
 
 ## 🎯 Features
 
-- **4 Classic Games**: Tic-Tac-Toe, Snake, Memory Game (Simon Says), Rock Paper Scissors
+- **10 Classic Games**: Tic-Tac-Toe, Snake, Memory Game (Simon Says), Rock Paper Scissors, Tetris, Chess, 2048, Pong, Breakout, Connect Four
+- **Elegant Modern Design**: Clean, minimalist interface with subtle shadows and professional styling
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
-- **Modern UI**: Beautiful gradient backgrounds, smooth animations, and glass-morphism effects
 - **Local High Scores**: Automatic score tracking using localStorage
 - **Optimized Performance**: Lightweight, fast-loading, and efficient
 - **Easy Deployment**: Static files, ready for any web server
@@ -20,15 +20,11 @@ A modern, responsive web-based game console featuring multiple classic games wit
 - Score tracking for X and O players
 - Visual win animations
 
-![Tic-Tac-Toe Game](https://github.com/user-attachments/assets/3a9ec554-dcff-4dd8-bcb4-d2701f88f1ab)
-
 ### 2. Snake
 - Control the snake with arrow keys or touch buttons
 - Eat food to grow longer and increase score
 - High score persistence
 - Game over detection
-
-![Snake Game](https://github.com/user-attachments/assets/ce9d2d1c-e689-4eed-82c3-d5707ac13c32)
 
 ### 3. Memory Game (Simon Says)
 - Remember and repeat color sequences
@@ -36,15 +32,47 @@ A modern, responsive web-based game console featuring multiple classic games wit
 - Audio feedback for each color
 - Score based on level completion
 
-![Memory Game](https://github.com/user-attachments/assets/d270744c-b171-45ea-9b6f-496aea5f5b9f)
-
 ### 4. Rock Paper Scissors
 - Play against the computer
 - Animated countdown and reveal
 - First to 5 wins takes the game
 - Visual feedback for wins/losses
 
-![Rock Paper Scissors](https://github.com/user-attachments/assets/076ee445-5709-42a5-8617-f35ac2de1769)
+### 5. Tetris
+- Classic falling blocks puzzle game
+- 7 different piece types (I, O, T, S, Z, J, L)
+- Line clearing and level progression
+- Keyboard controls for movement and rotation
+
+### 6. Chess
+- Strategic board game with simplified rules
+- Classic piece movement patterns
+- Turn-based gameplay
+- Visual move highlighting
+
+### 7. 2048
+- Number sliding puzzle game
+- Combine tiles to reach 2048
+- Score tracking and best score persistence
+- Smooth tile animations
+
+### 8. Pong
+- Classic arcade paddle game
+- Mouse or keyboard controls
+- AI opponent with progressive difficulty
+- First to 5 points wins
+
+### 9. Breakout
+- Ball and paddle brick-breaking game
+- Multiple levels with increasing difficulty
+- Power-ups and score multipliers
+- Lives system
+
+### 10. Connect Four
+- Connect four pieces in a row to win
+- Two-player strategic gameplay
+- Drop pieces by clicking columns
+- Win detection in all directions
 
 ## 🚀 Getting Started
 
@@ -101,11 +129,11 @@ The game console is fully responsive and includes:
 
 ## 🎨 Design Features
 
-- **Glass-morphism**: Modern translucent card designs
-- **Gradient Backgrounds**: Beautiful animated color gradients
-- **Smooth Animations**: CSS transitions and keyframe animations
-- **Responsive Typography**: Orbitron font for gaming aesthetic
-- **Visual Feedback**: Hover effects, click animations, and game state indicators
+- **Elegant Minimalism**: Clean white cards with subtle shadows and professional styling
+- **Soft Color Palette**: Light grays, whites, and subtle accent colors
+- **Smooth Interactions**: Gentle hover effects and refined animations
+- **Responsive Typography**: Orbitron font for modern gaming aesthetic
+- **Accessible Design**: High contrast and clear visual hierarchy
 
 ## 📦 Deployment
 
@@ -135,15 +163,21 @@ EXPOSE 80
 
 ```
 games/
-├── index.html              # Main HTML file
+├── index.html              # Main HTML file with all game interfaces
 ├── styles/
-│   └── main.css           # All styling and animations
+│   └── main.css           # Elegant styling and responsive design
 ├── js/
 │   ├── main.js            # Game console controller
 │   ├── tic-tac-toe.js     # Tic-Tac-Toe game logic
 │   ├── snake.js           # Snake game logic
 │   ├── memory.js          # Memory game logic
-│   └── rock-paper-scissors.js # RPS game logic
+│   ├── rock-paper-scissors.js # RPS game logic
+│   ├── tetris.js          # Tetris game logic
+│   ├── chess.js           # Chess game logic
+│   ├── 2048.js            # 2048 game logic
+│   ├── pong.js            # Pong game logic
+│   ├── breakout.js        # Breakout game logic
+│   └── connect-four.js    # Connect Four game logic
 ├── package.json           # Project configuration
 └── README.md             # This file
 ```
@@ -154,7 +188,7 @@ games/
 - **Optimized Animations**: CSS transitions over JavaScript animations
 - **Efficient Game Loops**: RequestAnimationFrame and optimized intervals
 - **Lazy Loading**: Games initialize only when accessed
-- **Small Bundle Size**: ~25KB total (HTML + CSS + JS)
+- **Compact Bundle Size**: ~60KB total (HTML + CSS + JS for 10 games)
 
 ## 🔧 Customization
 

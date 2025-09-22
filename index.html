@@ -40,6 +40,36 @@
                         <h3>Rock Paper Scissors</h3>
                         <p>Beat the computer</p>
                     </div>
+                    <div class="game-card" data-game="tetris">
+                        <div class="game-icon">🟦</div>
+                        <h3>Tetris</h3>
+                        <p>Classic falling blocks puzzle</p>
+                    </div>
+                    <div class="game-card" data-game="chess">
+                        <div class="game-icon">♛</div>
+                        <h3>Chess</h3>
+                        <p>Strategic board game</p>
+                    </div>
+                    <div class="game-card" data-game="2048">
+                        <div class="game-icon">🔢</div>
+                        <h3>2048</h3>
+                        <p>Number sliding puzzle</p>
+                    </div>
+                    <div class="game-card" data-game="pong">
+                        <div class="game-icon">🏓</div>
+                        <h3>Pong</h3>
+                        <p>Classic arcade paddle game</p>
+                    </div>
+                    <div class="game-card" data-game="breakout">
+                        <div class="game-icon">🧱</div>
+                        <h3>Breakout</h3>
+                        <p>Ball and paddle brick-breaker</p>
+                    </div>
+                    <div class="game-card" data-game="connect-four">
+                        <div class="game-icon">🔴</div>
+                        <h3>Connect Four</h3>
+                        <p>Connect four pieces in a row</p>
+                    </div>
                 </div>
             </div>
 
@@ -149,6 +179,108 @@
                 </div>
                 <div class="game-status" id="rps-status">Make your choice!</div>
             </div>
+
+            <!-- Tetris -->
+            <div id="tetris" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Tetris</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">Score: <span id="tetris-score">0</span></div>
+                    <div class="score">Level: <span id="tetris-level">1</span></div>
+                    <div class="score">Lines: <span id="tetris-lines">0</span></div>
+                </div>
+                <div class="tetris-container">
+                    <canvas id="tetris-canvas" width="300" height="600"></canvas>
+                    <div class="tetris-controls">
+                        <div>Controls:</div>
+                        <div>← → Move</div>
+                        <div>↓ Soft Drop</div>
+                        <div>↑ Rotate</div>
+                        <div>Space Hard Drop</div>
+                    </div>
+                </div>
+                <div class="game-status" id="tetris-status">Use arrow keys to play</div>
+            </div>
+
+            <!-- Chess -->
+            <div id="chess" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Chess</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">Current Player: <span id="chess-current-player">White</span></div>
+                    <div class="score">Moves: <span id="chess-moves">0</span></div>
+                </div>
+                <div class="chess-board" id="chess-board"></div>
+                <div class="game-status" id="chess-status">White to move</div>
+            </div>
+
+            <!-- 2048 -->
+            <div id="2048" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>2048</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">Score: <span id="2048-score">0</span></div>
+                    <div class="score">Best: <span id="2048-best">0</span></div>
+                </div>
+                <div class="game-2048-board" id="2048-board"></div>
+                <div class="game-status" id="2048-status">Use arrow keys to move tiles</div>
+            </div>
+
+            <!-- Pong -->
+            <div id="pong" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Pong</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">Player: <span id="pong-player-score">0</span></div>
+                    <div class="score">Computer: <span id="pong-computer-score">0</span></div>
+                </div>
+                <canvas id="pong-canvas" width="600" height="400"></canvas>
+                <div class="game-status" id="pong-status">Use mouse to control paddle</div>
+            </div>
+
+            <!-- Breakout -->
+            <div id="breakout" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Breakout</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">Score: <span id="breakout-score">0</span></div>
+                    <div class="score">Lives: <span id="breakout-lives">3</span></div>
+                    <div class="score">Level: <span id="breakout-level">1</span></div>
+                </div>
+                <canvas id="breakout-canvas" width="600" height="400"></canvas>
+                <div class="game-status" id="breakout-status">Use mouse to control paddle</div>
+            </div>
+
+            <!-- Connect Four -->
+            <div id="connect-four" class="screen game-screen">
+                <div class="game-header">
+                    <button class="back-btn">← Back</button>
+                    <h2>Connect Four</h2>
+                    <button class="reset-btn">Reset</button>
+                </div>
+                <div class="game-info">
+                    <div class="score">Current Player: <span id="connect-four-current-player">Red</span></div>
+                    <div class="score">Red: <span id="connect-four-red-score">0</span></div>
+                    <div class="score">Yellow: <span id="connect-four-yellow-score">0</span></div>
+                </div>
+                <div class="connect-four-board" id="connect-four-board"></div>
+                <div class="game-status" id="connect-four-status">Click a column to drop your piece</div>
+            </div>
         </main>
 
         <footer class="footer">
@@ -161,5 +293,11 @@
     <script src="js/snake.js"></script>
     <script src="js/memory.js"></script>
     <script src="js/rock-paper-scissors.js"></script>
+    <script src="js/tetris.js"></script>
+    <script src="js/chess.js"></script>
+    <script src="js/2048.js"></script>
+    <script src="js/pong.js"></script>
+    <script src="js/breakout.js"></script>
+    <script src="js/connect-four.js"></script>
 </body>
 </html>
