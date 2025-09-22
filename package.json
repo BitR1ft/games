@@ -1,7 +1,7 @@
 {
   "name": "web-game-console",
   "version": "1.0.0",
-  "description": "A web-based game console with multiple games including Tic-Tac-Toe, Snake, and more",
+  "description": "A web-based game console with 10 classic games including Tic-Tac-Toe, Snake, Tetris, Chess, 2048, Pong, Breakout, Connect Four, Memory Game, and Rock Paper Scissors",
   "main": "index.html",
   "scripts": {
     "start": "npx http-server . -p 8080",
@@ -13,9 +13,20 @@
     "games",
     "tic-tac-toe",
     "snake",
+    "tetris",
+    "chess",
+    "2048",
+    "pong",
+    "breakout",
+    "connect-four",
+    "memory-game",
+    "rock-paper-scissors",
     "web",
     "html5",
-    "javascript"
+    "javascript",
+    "canvas",
+    "responsive",
+    "game-console"
   ],
   "author": "BitR1ft",
   "license": "MIT",
